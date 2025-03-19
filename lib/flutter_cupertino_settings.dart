@@ -5,7 +5,6 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' show Theme;
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 
 part 'widgets/button.dart';
@@ -39,10 +38,10 @@ typedef void SelectionCallback(int selected);
 
 TextStyle basicTextStyle(BuildContext context) =>
     (kIsWeb
-        ? Theme.of(context).textTheme.subtitle2
+        ? Theme.of(context).textTheme.titleSmall
         : Platform.isIOS
             ? CupertinoTheme.of(context).textTheme.textStyle
-            : Theme.of(context).textTheme.subtitle2) ??
+            : Theme.of(context).textTheme.titleSmall) ??
     TextStyle();
 
 class CupertinoSettings extends StatelessWidget {
